@@ -1,0 +1,16 @@
+﻿@model List<AzureMVC.Models.Customer>
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="jumbotron">
+    <section class="twelve columns">
+        <p>Customer list: </p>
+        @foreach (var customer in Model)
+        {
+            @Html.ActionLink(customer.RowKey, "Details", new { rowKey = customer.RowKey, partitionKey = customer.PartitionKey })<br />
+        }
+        
+    </section>
+    <hr/>
+    @Html.ActionLink("Add customer", "Edit")
+</div>

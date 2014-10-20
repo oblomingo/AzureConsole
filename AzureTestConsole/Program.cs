@@ -36,7 +36,7 @@ namespace AzureTestConsole
             //// Create the TableOperation that inserts the customer entity.
             //var insertOperation = TableOperation.Insert(customer1);
 
-            //// Execute the insert operation.
+            // Execute the insert operation.
             //table.Execute(insertOperation);
 
             // Read storage
@@ -52,8 +52,9 @@ namespace AzureTestConsole
                 Console.WriteLine(customerEntity.PartitionKey.ToString());
                 Console.WriteLine(customerEntity.Email);
 
-                Console.ReadKey();
+                
             }
+            Console.ReadKey();
         }
     }
 
